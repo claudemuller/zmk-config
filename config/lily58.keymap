@@ -33,7 +33,7 @@
 &kp GRAVE       &kp SQT    &kp COMMA   &kp DOT     &kp P      &kp Y                              &kp F      &kp G       &kp C      &kp R      &kp L    &kp BSLH
 &kp BSPC        &kp  A     &kp   O     &kp E       &kp U      &kp I                              &kp D      &kp H       &kp T      &kp N      &kp S    &kp MINUS
 &mt LSHFT TAB &mt LCTRL SEMI &mt LALT Q &kp J      &kp K      &kp X    &kp LBKT     &kp RBKT     &kp B      &kp M       &kp W   &mt RALT V  &mt RCTRL Z &mt RSHFT FSLH
-                         &tg qwerty    &mo tools   &kp LGUI   &kp LALT                           &kp RET    &kp SPACE   &mo tools  &tg qwerty
+                           &tg 1       &mo 2       &kp LGUI   &kp LALT                           &kp RET    &kp SPACE   &mo 2      &tg 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -53,7 +53,7 @@
 &kp GRAVE       &kp SQT    &kp COMMA   &kp DOT     &kp P      &kp Y                              &kp F      &kp G       &kp C      &kp R      &kp L    &kp BSLH
 &kp BSPC        &kp  A     &kp   O     &kp E       &kp U      &kp I                              &kp D      &kp H       &kp T      &kp N      &kp S    &kp MINUS
 &mt LSHFT TAB &mt LCTRL SEMI &mt LALT Q &kp J      &kp K      &kp X    &kp LBKT     &kp RBKT     &kp B      &kp M       &kp W   &mt RALT V  &mt RCTRL Z &mt RSHFT FSLH
-                         &tg qwerty    &mo tools   &kp LGUI   &kp LALT                           &kp RET    &kp SPACE   &mo tools  &tg qwerty
+                           &tg 1       &mo 2       &kp LGUI   &kp LALT                           &kp RET    &kp SPACE   &mo 2      &tg 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
