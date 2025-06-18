@@ -26,7 +26,7 @@
 // |    ESC   |    1     |     2    |    3     |    4     |    5     |                        |     6    |    7     |    8     |     9    |    0     |     =    |
 // |     `    |    '     |     ,    |    .     |    P     |    Y     |                        |     F    |    G     |    C     |     R    |    L     |     \    |
 // |    BKSP  |    A     |     O    |    E     |    U     |    I     |                        |     D    |    H     |    T     |     N    |    S     |     -    |
-// | TAB_SHFT |  ;_CTRL  |   Q_ALT  |    J     |    K     |    X     |     [    |  |     ]    |     B    |    M     |    W     |   V_ALT  |  Z_CTRL  |  ?_SHFT  |
+// | TAB_SHFT |  ;_CTRL  |   Q_ALT  |    J     |    K     |    X     |    "["   |  |    "]"   |     B    |    M     |    W     |   V_ALT  |  Z_CTRL  |  ?_SHFT  |
 //                       |    TG1   |   MT2    |    GUI   |   ALT    |                        |   ENTER  |   SPACE  |    MT1   |    TG1   |
             bindings = <
 &kp ESC         &kp  N1    &kp   N2    &kp N3      &kp N4     &kp N5                             &kp N6     &kp N7      &kp N8     &kp N9     &kp N0   &kp EQUAL
@@ -46,7 +46,7 @@
 // |    ESC   |    1     |     2    |    3     |    4     |    5     |                        |     6    |    7     |    8     |     9    |    0     |     =    |
 // |     `    |    Q     |     W    |    E     |    R     |    T     |                        |     Y    |    U     |    I     |     O    |    P     |     \    |
 // |    BKSP  |    A     |     S    |    D     |    F     |    G     |                        |     H    |    J     |    K     |     L    |    ;     |     '    |
-// | TAB_SHFT |  Z_CTRL  |   X_ALT  |    C     |    V     |    B     |     [    |  |     ]    |     N    |    M     |    ,     |   ._ALT  |  /_CTRL  |  -_SHFT  |
+// | TAB_SHFT |  Z_CTRL  |   X_ALT  |    C     |    V     |    B     |    "["   |  |    "]"   |     N    |    M     |    ,     |   ._ALT  |  /_CTRL  |  -_SHFT  |
 //                       |    TG1   |   MT2    |    GUI   |   ALT    |                        |   ENTER  |   SPACE  |    MT1   |    TG1   |
             bindings = <
 &kp ESC         &kp  N1    &kp   N2    &kp N3      &kp N4     &kp N5                             &kp N6     &kp N7      &kp N8     &kp N9     &kp N0   &kp EQUAL
