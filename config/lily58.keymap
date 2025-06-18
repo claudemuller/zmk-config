@@ -1,0 +1,82 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/pointing.h>
+
+&mt {
+    flavor = "hold-preferred";
+//    tapping-term-ms = 200;
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        dvorak {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                                        Layer 0 - Dvorak                                                                      |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |    ESC   |    1     |     2    |    3     |    4     |    5     |                        |     6    |    7     |    8     |     9    |    0     |     =    |
+// |     `    |    '     |     ,    |    .     |    P     |    Y     |                        |     F    |    G     |    C     |     R    |    L     |     \    |
+// |    BKSP  |    A     |     O    |    E     |    U     |    I     |                        |     D    |    H     |    T     |     N    |    S     |     -    |
+// | TAB_SHFT |  ;_CTRL  |   Q_ALT  |    J     |    K     |    X     |     [    |  |     ]    |     B    |    M     |    W     |   V_ALT  |  Z_CTRL  |  ?_SHFT  |
+//                       |    TG1   |   MT2    |    GUI   |   ALT    |                        |   ENTER  |   SPACE  |    MT1   |    TG1   |
+            bindings = <
+&kp ESC         &kp  N1    &kp   N2    &kp N3      &kp N4     &kp N5                             &kp N6     &kp N7      &kp N8     &kp N9     &kp N0   &kp EQUAL
+&kp GRAVE       &kp SQT    &kp COMMA   &kp DOT     &kp P      &kp Y                              &kp F      &kp G       &kp C      &kp R      &kp L    &kp BSLH
+&kp LCTRL       &kp  A     &kp   O     &kp E       &kp U      &kp I                              &kp D      &kp H       &kp T      &kp N      &kp S    &kp MINUS
+&mt LSHFT TAB &mt LCTRL SEMI &mt LALT Q &kp J      &kp K      &kp X    &kp LBKT     &kp RBKT     &kp B      &kp M       &kp W   &mt RALT V  &mt RCTRL Z &mt RSHFT FSLH
+                         &tg qwerty    &mo tools   &kp GUI    &kp LALT                           &kp RET    &kp SPACE   &mo tools  &tg qwerty
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        qwerty {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                                        Layer 1 - Qwerty                                                                      |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |    ESC   |    1     |     2    |    3     |    4     |    5     |                        |     6    |    7     |    8     |     9    |    0     |     =    |
+// |     `    |    Q     |     W    |    E     |    R     |    T     |                        |     Y    |    U     |    I     |     O    |    P     |     \    |
+// |    BKSP  |    A     |     S    |    D     |    F     |    G     |                        |     H    |    J     |    K     |     L    |    ;     |     '    |
+// | TAB_SHFT |  Z_CTRL  |   X_ALT  |    C     |    V     |    B     |     [    |  |     ]    |     N    |    M     |    ,     |   ._ALT  |  /_CTRL  |  -_SHFT  |
+//                       |    TG1   |   MT2    |    GUI   |   ALT    |                        |   ENTER  |   SPACE  |    MT1   |    TG1   |
+            bindings = <
+&kp ESC         &kp  N1    &kp   N2    &kp N3      &kp N4     &kp N5                             &kp N6     &kp N7      &kp N8     &kp N9     &kp N0   &kp EQUAL
+&kp GRAVE       &kp SQT    &kp COMMA   &kp DOT     &kp P      &kp Y                              &kp F      &kp G       &kp C      &kp R      &kp L    &kp BSLH
+&kp LCTRL       &kp  A     &kp   O     &kp E       &kp U      &kp I                              &kp D      &kp H       &kp T      &kp N      &kp S    &kp MINUS
+&mt LSHFT TAB &mt LCTRL SEMI &mt LALT Q &kp J      &kp K      &kp X    &kp LBKT     &kp RBKT     &kp B      &kp M       &kp W   &mt RALT V  &mt RCTRL Z &mt RSHFT FSLH
+                         &tg qwerty    &mo tools   &kp GUI    &kp LALT                           &kp RET    &kp SPACE   &mo tools  &tg qwerty
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        tools {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                                        Layer 2 - Tools                                                                       |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |  BT_CLR  |   BT_0   |   BT_1   |   BT_2   |   BT_3   |   BT_4   |                        |  VOL_DWN |  MD_PREV | MD_PLAY  |  MD_NXT  |  VOL_UP  |  UNLOCK  |
+// |    F1    |    F2    |    F3    |    F4    |    F5    |    F6    |                        |    F7    |    F8    |    F9    |    F10   |    F11   |   F12    |
+// |          |          |          |  MS_DWN  |   MS_UP  |          |                        |          |  MS_LFT  |  MS_RGH  |          |          |          |
+// |   SHFT   |   CTRL   |    ALT   | DWN_ARR  |  UP_ARR  |          |          |  |          |          | LFT_ARR  | RGHT_ARR |    ALT   |   CTRL   |   SHFT   |
+//                       |          |          |          |   LCLK   |                        |   RCLK   |   MCLK   |          |          |
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  &kp K_VOL_DN &kp K_PREV &kp K_PP &kp K_NEXT &kp K_VOL_UP &studio_unlock
+&kp F1          &kp F2      &kp F3      &kp F4    &kp F5     &kp F6                              &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12
+&trans          &trans   &trans  &mmv MOVE_DOWN &mmv MOVE_UP  &trans                            &trans  &mmv MOVE_LEFT &mmv MOVE_RIGHT &trans &trans   &trans
+&kp LSHFT     &kp LCTRL   &kp LALT &kp DOWN_ARROW &kp UP_ARROW &trans   &trans        &trans    &trans &kp LEFT_ARROW &kp RIGHT_ARROW &kp RALT &kp RCTRL &kp RSHFT
+                           &trans     &trans    &mkp MCLK   &mkp LCLK                          &mkp RCLK    &trans     &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+    };
+};
