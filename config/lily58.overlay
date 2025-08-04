@@ -1,0 +1,7 @@
+&gpio0 {
+    wakeup-source;
+};
+
+&gpio1 {
+    wakeup-source;
+};
