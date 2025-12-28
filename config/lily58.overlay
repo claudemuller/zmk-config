@@ -5,3 +5,8 @@
 &gpio1 {
     wakeup-source;
 };
+
+/ {
+    tapping-term-ms = <250>;
+    permissive-hold = <1>;
+};
