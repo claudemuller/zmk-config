@@ -16,9 +16,6 @@
 };
 
 / {
-    tapping-term-ms = 250;
-    /* permissive-hold = <1>; */
-
     keymap {
         compatible = "zmk,keymap";
 
