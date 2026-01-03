@@ -7,6 +7,6 @@
 };
 
 / {
-    tapping-term-ms = <250>;
+    tapping-term-ms = <280>;
     permissive-hold = <1>;
 };
