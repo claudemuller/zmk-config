@@ -6,7 +6,7 @@
     wakeup-source;
 };
 
-/ {
-    tapping-term-ms = <250>;
-    permissive-hold = <1>;
-};
+/* / { */
+/*     tapping-term-ms = <250>; */
+/*     permissive-hold = <1>; */
+/* }; */
